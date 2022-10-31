@@ -1,0 +1,20 @@
+{
+  "name": "todoapp-with-nodejs-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naonao-aaa/todoapp-node.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naonao-aaa/todoapp-node.js/issues"
+  },
+  "homepage": "https://github.com/naonao-aaa/todoapp-node.js#readme"
+}
