@@ -22,7 +22,7 @@ const showTasks = async () => {
             <i class="fas fa-edit"></i>
           </a>
           <!-- ゴミ箱リンク -->
-          <button type="button" class="delete-btn">
+          <button type="button" class="delete-btn" data-id="${_id}">
             <i class="fas fa-trash"></i>
           </button>
         </div>
@@ -50,4 +50,20 @@ formDOM.addEventListener("submit", async (event) => {
   } catch (err) {
     console.log(err);
   }
-})
+});
+
+//タスクを削除する
+tasksDOM.addEventListener("click", async (event) => {
+  const element = event.target;
+  console.log(element.parentElement);
+  if(element.parentElement.classList.contains("delete-btn")){
+    const id = element.parentElement.dataset.id;
+    console.log(id);
+    try {
+      await axios.delete(`/api/v1/tasks/${id}`);
+      showTasks();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+});
