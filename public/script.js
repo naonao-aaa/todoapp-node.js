@@ -22,7 +22,7 @@ const showTasks = async () => {
       //console.log(task);
       const { completed, _id, name } = task;
       //console.log(name);
-      return `<div class="single-task">
+      return `<div class="single-task ${completed && "task-completed"}">
         <h5><span><i class="far fa-check-circle"></i></span>${name}</h5>
         <div class="task-links">
           <!-- 編集リンク -->
