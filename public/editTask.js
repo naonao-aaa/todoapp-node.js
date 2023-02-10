@@ -16,6 +16,9 @@ const showTask = async () => {
     const {_id, completed, name } = task;
     taskIDDOM.textContent = _id;
     taskNameDOM.value = name;
+    if(completed) {
+      taskCompletedDOM.checked = true;
+    }
   } catch (err) {
     console.log(err);
   }
